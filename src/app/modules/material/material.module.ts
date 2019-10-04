@@ -11,7 +11,7 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 
 import {
-  MatToolbarModule
+  MatToolbarModule, MatGridListModule
 } from '@angular/material';
 
 @NgModule({
@@ -28,7 +28,8 @@ import {
     CdkTableModule,
 
     // Material
-    MatToolbarModule
+    MatToolbarModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule {}
