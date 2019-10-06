@@ -1,10 +1,10 @@
 <mat-toolbar #topBar color="primary" class="mat-elevation-z1">DCS Dashboard</mat-toolbar>
 
-<mat-grid-list cols="3" rowHeight="{{matGridRowHeight}}px">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>5</mat-grid-tile>
-    <mat-grid-tile>6</mat-grid-tile>
+<mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
+    <mat-grid-tile><app-ktps></app-ktps></mat-grid-tile>
+    <mat-grid-tile><app-bktpp></app-bktpp></mat-grid-tile>
+    <mat-grid-tile><app-btps></app-btps></mat-grid-tile>
+    <mat-grid-tile><app-stps></app-stps></mat-grid-tile>
+    <mat-grid-tile><app-sgtpp></app-sgtpp></mat-grid-tile>
+    <mat-grid-tile><app-legend></app-legend></mat-grid-tile>
 </mat-grid-list>
