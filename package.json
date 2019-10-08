@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 4400",
-    "start:apache-prod": "ng build --prod --base-href /dcs-dashboard/ && lite-server",
+    "build:apache-prod": "ng build --prod --base-href /dcs-dashboard/",
     "start:lite-prod": "ng build --prod && lite-server",
+    "build:ghpages-prod": "ng build --prod --base-href https://dipankarnag.github.io/dcs-dashboard/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
