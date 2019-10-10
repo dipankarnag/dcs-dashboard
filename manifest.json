@@ -1,9 +1,10 @@
 {
-  "name": "dcs-dashboard",
-  "short_name": "dcs-dashboard",
+  "name": "Dcs Dashboard",
+  "short_name": "dcsdash",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
+  "orientation": "landscape",
   "scope": "/dcs-dashboard/",
   "start_url": "/dcs-dashboard/",
   "icons": [
