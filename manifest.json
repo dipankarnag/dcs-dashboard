@@ -1,7 +1,7 @@
 {
-  "name": "Dcs Dashboard",
-  "short_name": "dcsdash",
-  "theme_color": "#1976d2",
+  "name": "DCS Dashboard",
+  "short_name": "DCS Dashboard",
+  "theme_color": "#4d4d4d",
   "background_color": "#fafafa",
   "display": "standalone",
   "orientation": "landscape",
