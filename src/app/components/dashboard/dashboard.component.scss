@@ -1,3 +1,27 @@
+// mat-grid-tile {
+    
+// }
+
 mat-grid-tile {
     background: lightblue;
+    opacity: 0;
+    animation: plant-card-animation 500ms ease-in;
+    animation-fill-mode: forwards;
+    
+    @for $i from 1 to 7 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }
+    }
+}
+
+@keyframes plant-card-animation {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
