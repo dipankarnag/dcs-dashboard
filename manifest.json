@@ -5,8 +5,8 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "orientation": "landscape",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/dcs-dashboard/",
+  "start_url": "/dcs-dashboard/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
