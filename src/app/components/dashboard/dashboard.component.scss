@@ -1,6 +1,4 @@
-// mat-grid-tile {
-    
-// }
+$plant-cards: ktps, bktpp, btps, stps, sgtpp, legned;
 
 mat-grid-tile {
     background: lightblue;
@@ -8,7 +6,7 @@ mat-grid-tile {
     animation: plant-card-animation 500ms ease-in;
     animation-fill-mode: forwards;
     
-    @for $i from 1 to 7 {
+    @for $i from 1 to length($plant-cards)+1 {
         &:nth-child(#{$i}) {
             animation-delay: 100ms * $i;
         }
