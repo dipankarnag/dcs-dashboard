@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { SwUpdate } from '@angular/service-worker';
 
@@ -10,7 +12,15 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent implements OnInit {
   title = 'dcs-dashboard';
 
-  constructor(private swUpdate: SwUpdate) {}
+  constructor(
+    private swUpdate: SwUpdate,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon(
+      'plant-icon',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('src/assets/icons/plant-icon.svg')
+    );
+  }
 
   ngOnInit() {
     this.reloadCache();
