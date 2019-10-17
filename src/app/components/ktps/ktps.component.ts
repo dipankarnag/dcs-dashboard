@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KtpsComponent implements OnInit {
 
+  public innerWidth: any;
+
   constructor() { }
 
   ngOnInit() {

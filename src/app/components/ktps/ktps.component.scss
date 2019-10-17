@@ -1,0 +1,24 @@
+mat-card {
+    padding: 0;
+    height: 100%;
+}
+
+.mat-card-header {
+    height: 25%;
+}
+
+.mat-card-title {
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+.mat-card-content {
+    height: 75%;
+    background-color: rgb(204, 204, 204);
+}
+
+@media screen and (max-width: 780px), screen and (max-height: 500px) {
+    .mat-card-subtitle {
+        display: none;
+    }
+}
