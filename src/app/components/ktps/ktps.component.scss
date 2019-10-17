@@ -1,24 +1,54 @@
-mat-card {
+.plant-card {
     padding: 0;
     height: 100%;
 }
 
-.mat-card-header {
+.plant-card .mat-card-header {
     height: 25%;
+    // background-color: rgb(204, 204, 204);
+    background-color: black;
 }
 
-.mat-card-title {
+.plant-card .mat-card-title {
     margin-top: 0.5em;
     margin-bottom: 0.2em;
+    color: white;
 }
 
-.mat-card-content {
+.plant-card .mat-card-subtitle {
+    margin-top: 0.5em;
+    // margin-bottom: 0.2em;
+    color: white;
+}
+
+.plant-card .mat-card-content {
     height: 75%;
-    background-color: rgb(204, 204, 204);
+    // background-color: rgb(204, 204, 204);
+    padding: 1.2em;
+    text-align: center;
+}
+
+.unit-card {
+    width: 25%;
+    height: 25%;
+    margin: 1.1em;
 }
 
 @media screen and (max-width: 780px), screen and (max-height: 500px) {
-    .mat-card-subtitle {
+    .plant-card .mat-card-subtitle {
         display: none;
+    }
+}
+
+.buffering {
+    animation: inf-spin 2s infinite linear;
+}
+
+@keyframes inf-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
