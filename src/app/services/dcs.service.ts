@@ -6,11 +6,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DcsService {
 
-  private _dcsUrl = 'assets/data/dcs.json';
+  private _dcsLinkUrl = 'assets/data/dcs.json';
+  private _getDcsDataUrl = '/dcs-api/get_dcs_data.php';
 
   constructor(private http: HttpClient) { }
 
-  getDcsLink() {
-    return this.http.get(this._dcsUrl);
+  getDcsLinks() {
+    return this.http.get(this._dcsLinkUrl);
+  }
+
+  getDcsData(url: string) {
+    console.log(url);
+    return this.http.post(this._getDcsDataUrl, {
+      'url': url
+    });
   }
 }

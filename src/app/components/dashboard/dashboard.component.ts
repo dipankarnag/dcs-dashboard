@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.matGridRowHeight = 0;
-    this.dcsService.getDcsLink().subscribe(
+    this.dcsService.getDcsLinks().subscribe(
       data => {
         this.dcsLinks = data;
         // console.log(data['ktps']);

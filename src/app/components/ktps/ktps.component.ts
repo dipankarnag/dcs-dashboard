@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
+import { DcsService } from '../../services/dcs.service';
+
 @Component({
   selector: 'app-ktps',
   templateUrl: './ktps.component.html',
@@ -12,7 +14,7 @@ export class KtpsComponent implements OnInit, OnChanges {
   @Input('ktpsLinks') ktpsLinks: any;
   public ktpsUnits = [];
 
-  constructor() { }
+  constructor(private dcsService: DcsService) { }
 
   ngOnInit() {
   }
@@ -24,6 +26,12 @@ export class KtpsComponent implements OnInit, OnChanges {
           'unitno': unitno,
           'link': this.ktpsLinks[unitno]['url']
         });
+        if (this.ktpsLinks[unitno]['url'] !== '#') {
+          this.dcsService.getDcsData(this.ktpsLinks[unitno]['url'])
+          .subscribe(data => {
+            console.log(data);
+          });
+        }
       }
     }
   }
