@@ -1,0 +1,100 @@
+{
+    "ktps": {
+        "1": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "2": {
+            "url": "http://192.168.1.221:8080/ktpsplantparameters.jsp?unitno=2",
+            "status": "buffering"
+        },
+        "3": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "4": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "5": {
+            "url": "http://192.168.1.222:8080/ktpsplantparameters.jsp?unitno=5",
+            "status": "buffering"
+        },
+        "6": {
+            "url": "#",
+            "status": "not-available"
+        }
+    },
+    "bktpp": {
+        "1": {
+            "url": "http://192.168.40.51:8080/bktpsplantparameters.jsp?unitno=1",
+            "status": "buffering"
+        },
+        "2": {
+            "url": "http://192.168.40.51:8080/bktpsplantparameters.jsp?unitno=2",
+            "status": "buffering"
+        },
+        "3": {
+            "url": "http://192.168.40.51:8080/bktpsplantparameters.jsp?unitno=3",
+            "status": "buffering"
+        },
+        "4": {
+            "url": "http://192.168.40.51:8080/bktpsplantparameters.jsp?unitno=4",
+            "status": "buffering"
+        },
+        "5": {
+            "url": "http://192.168.40.51:8080/bktpsplantparameters.jsp?unitno=5",
+            "status": "buffering"
+        }
+    },
+    "btps": {
+        "1": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "2": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "3": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "4": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "5": {
+            "url": "http://192.168.23.13:8080/btpsplantparameters.jsp?unitno=5",
+            "status": "buffering"
+        }
+    },
+    "stps": {
+        "5": {
+            "url": "http://192.168.32.198:8080/stpsplantparameters.jsp?unitno=5",
+            "status": "buffering"
+        },
+        "6": {
+            "url": "http://192.168.32.198:8080/stpsplantparameters.jsp?unitno=6",
+            "status": "buffering"
+        }
+    },
+    "sgtpp": {
+        "1": {
+            "url": "http://192.168.24.60:8080/sgtppplantparameters.jsp?unitno=1",
+            "status": "buffering"
+        },
+        "2": {
+            "url": "http://192.168.24.61:8080/sgtppplantparameters.jsp?unitno=2",
+            "status": "buffering"
+        },
+        "3": {
+            "url": "#",
+            "status": "not-available"
+        },
+        "4": {
+            "url": "#",
+            "status": "not-available"
+        }
+    }
+}

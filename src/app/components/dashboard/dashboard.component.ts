@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 
+import { DcsService } from '../../services/dcs.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,10 +18,11 @@ export class DashboardComponent implements OnInit {
   public mainGridRows: any;
   public gutterSpace: any;
 
-  constructor() { }
+  constructor(private dcsService: DcsService) { }
 
   ngOnInit() {
     this.matGridRowHeight = 0;
+    this.dcsService.getDcsLink().subscribe(data => console.log(data));
   }
 
   @HostListener('window:load', ['$event'])
