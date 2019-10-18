@@ -63,6 +63,12 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .plant-card .mat-card-content {
+        overflow-x: auto;
+    }
+}
+
 .buffering {
     animation: inf-spin 2s infinite linear;
 }
