@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     private domSanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon(
       'plant-icon',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/plant-icon.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/custom-icons/plant-icon.svg')
     );
   }
 
