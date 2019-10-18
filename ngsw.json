@@ -9,7 +9,7 @@
       "urls": [
         "https://dipankarnag.github.io/dcs-dashboard/favicon.ico",
         "https://dipankarnag.github.io/dcs-dashboard/index.html",
-        "https://dipankarnag.github.io/dcs-dashboard/main.b36c2b9ffbd240c18e75.js",
+        "https://dipankarnag.github.io/dcs-dashboard/main.561241aeb3cce5d6782f.js",
         "https://dipankarnag.github.io/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js",
         "https://dipankarnag.github.io/dcs-dashboard/runtime.a66f828dca56eeb90e02.js",
         "https://dipankarnag.github.io/dcs-dashboard/styles.99a817aeb208dea74b94.css"
@@ -21,6 +21,7 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "https://dipankarnag.github.io/dcs-dashboard/assets/custom-icons/plant-icon.svg",
         "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-128x128.png",
         "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-144x144.png",
         "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-152x152.png",
@@ -28,14 +29,14 @@
         "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-384x384.png",
         "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-512x512.png",
         "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-72x72.png",
-        "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-96x96.png",
-        "https://dipankarnag.github.io/dcs-dashboard/assets/icons/plant-icon.svg"
+        "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
+    "https://dipankarnag.github.io/dcs-dashboard/assets/custom-icons/plant-icon.svg": "0874889c9bd48d80c8db403bcb57122cea60f36a",
     "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -44,10 +45,9 @@
     "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://dipankarnag.github.io/dcs-dashboard/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "https://dipankarnag.github.io/dcs-dashboard/assets/icons/plant-icon.svg": "831cc63eee01762a5aaacd77fd49bf419521a70d",
     "https://dipankarnag.github.io/dcs-dashboard/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://dipankarnag.github.io/dcs-dashboard/index.html": "cd6dca1b04489291776045abe8f988e7b5262232",
-    "https://dipankarnag.github.io/dcs-dashboard/main.b36c2b9ffbd240c18e75.js": "9b8b52f40d3f85f4b23af5787f76887c42776557",
+    "https://dipankarnag.github.io/dcs-dashboard/index.html": "6deae49e55abbc5276b4a689fc7ba99a61c6738e",
+    "https://dipankarnag.github.io/dcs-dashboard/main.561241aeb3cce5d6782f.js": "94c758909a33fc4b7bd3d3f4d6e40ce4924d6f46",
     "https://dipankarnag.github.io/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js": "ddf35f345b37339fe434522df96f2461f4cefa80",
     "https://dipankarnag.github.io/dcs-dashboard/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
     "https://dipankarnag.github.io/dcs-dashboard/styles.99a817aeb208dea74b94.css": "17bacd4cbcae70ddb1e54d65eab345a5246fb106"
