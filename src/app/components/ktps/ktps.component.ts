@@ -27,7 +27,7 @@ export class KtpsComponent implements OnInit, OnChanges {
           'link': this.ktpsLinks[unitno]['url']
         });
         if (this.ktpsLinks[unitno]['url'] !== '#') {
-          this.dcsService.getDcsData(this.ktpsLinks[unitno]['url'])
+          this.dcsService.getDcsData('ktps', unitno, this.ktpsLinks[unitno]['url'])
           .subscribe(data => {
             console.log(data);
           });
