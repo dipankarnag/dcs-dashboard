@@ -10,6 +10,7 @@ export class KtpsComponent implements OnInit, OnChanges {
   public innerWidth: any;
 
   @Input('ktpsLinks') ktpsLinks: any;
+  public ktpsUnits = [];
 
   constructor() { }
 
@@ -18,7 +19,12 @@ export class KtpsComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.ktpsLinks !== undefined) {
-      console.log(this.ktpsLinks);
+      for (const unitno of Object.keys(this.ktpsLinks)) {
+        this.ktpsUnits.push({
+          'unitno': unitno,
+          'link': this.ktpsLinks[unitno]['url']
+        });
+      }
     }
   }
 

@@ -4,11 +4,7 @@
     <mat-card-subtitle>Kolaghat Thermal Power Station</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <button mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#1</button>
-    <button mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#1</button>
-    <button mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#1</button>
-    <button mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#1</button>
-    <button mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#1</button>
-    <button mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#1</button>
+    <button *ngFor="let unit of ktpsUnits"
+    mat-raised-button disabled="true" class="unit-card"><mat-icon class="buffering">autorenew</mat-icon>U#{{unit.unitno}}</button>
   </mat-card-content>
 </mat-card>
