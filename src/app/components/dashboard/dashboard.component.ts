@@ -17,12 +17,17 @@ export class DashboardComponent implements OnInit {
   @ViewChild('mainGrid') mainGrid: ElementRef|any;
   public mainGridRows: any;
   public gutterSpace: any;
+  public dcsLinks: any = {};
 
   constructor(private dcsService: DcsService) { }
 
   ngOnInit() {
     this.matGridRowHeight = 0;
-    this.dcsService.getDcsLink().subscribe(data => console.log(data));
+    this.dcsService.getDcsLink().subscribe(
+      data => {
+        this.dcsLinks = data;
+        // console.log(data['ktps']);
+      }, err => console.error(err));
   }
 
   @HostListener('window:load', ['$event'])

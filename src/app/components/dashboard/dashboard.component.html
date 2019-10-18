@@ -1,7 +1,7 @@
 <mat-toolbar #topBar color="primary" class="mat-elevation-z1">DCS Dashboard</mat-toolbar>
 
 <mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
-    <mat-grid-tile><app-ktps class="plant-card"></app-ktps></mat-grid-tile>
+    <mat-grid-tile><app-ktps [ktpsLinks]="dcsLinks['ktps']" class="plant-card"></app-ktps></mat-grid-tile>
     <mat-grid-tile><app-bktpp class="plant-card"></app-bktpp></mat-grid-tile>
     <mat-grid-tile><app-btps class="plant-card"></app-btps></mat-grid-tile>
     <mat-grid-tile><app-stps class="plant-card"></app-stps></mat-grid-tile>
