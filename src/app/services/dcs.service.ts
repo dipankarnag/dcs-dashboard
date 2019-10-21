@@ -15,9 +15,21 @@ export class DcsService {
     return this.http.get(this._dcsLinkUrl);
   }
 
-  getDcsData(plant, unitno, url) {
-    return this.http.post(this._getDcsDataUrl, {
-      'url': url
-    }, {observe: 'response', responseType: 'text', params: { 'plant': plant, 'unitno': unitno }});
+  // getDcsData(plant, unitno, url) {
+  //   return this.http.post(this._getDcsDataUrl, {
+  //     'url': url
+  //   }, {observe: 'response', responseType: 'text', params: { 'plant': plant, 'unitno': unitno }});
+  // }
+
+  getDcsData(plant, unitno) {
+    return this.http.get(this._getDcsDataUrl, {
+      observe: 'response',
+      responseType: 'text',
+      params: {
+        'plant': plant,
+        'unitno': unitno
+      }
+    });
   }
+
 }

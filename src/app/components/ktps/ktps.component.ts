@@ -24,12 +24,14 @@ export class KtpsComponent implements OnInit, OnChanges {
       for (const unitno of Object.keys(this.ktpsLinks)) {
         this.ktpsUnits.push({
           'unitno': unitno,
-          'link': this.ktpsLinks[unitno]['url']
+          'configured': this.ktpsLinks[unitno]['configured']
         });
-        if (this.ktpsLinks[unitno]['url'] !== '#') {
-          this.dcsService.getDcsData('ktps', unitno, this.ktpsLinks[unitno]['url'])
-          .subscribe(data => {
-            console.log(data);
+        if (this.ktpsLinks[unitno]['configured'] !== false) {
+          this.dcsService.getDcsData('ktps', unitno)
+          .subscribe(response => {
+            const targetUnitno = response.url.split('&unitno=')[1];
+            this.ktpsUnits[this.ktpsUnits.findIndex(unit => unit.unitno === targetUnitno)]['data'] = response.body;
+            console.log(this.ktpsUnits);
           });
         }
       }
