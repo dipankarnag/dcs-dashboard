@@ -2,7 +2,7 @@
     "ktps": {
         "1": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "2": {
             "configured": true,
@@ -10,11 +10,11 @@
         },
         "3": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "4": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "5": {
             "configured": true,
@@ -22,7 +22,7 @@
         },
         "6": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         }
     },
     "bktpp": {
@@ -50,19 +50,19 @@
     "btps": {
         "1": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "2": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "3": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "4": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "5": {
             "configured": true,
@@ -90,11 +90,11 @@
         },
         "3": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         },
         "4": {
             "configured": false,
-            "status": "not-available"
+            "status": "not-configured"
         }
     }
 }
