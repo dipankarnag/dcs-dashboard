@@ -24,7 +24,7 @@ export class DcsService {
   getDcsData(plant, unitno) {
     return this.http.get(this._getDcsDataUrl, {
       observe: 'response',
-      responseType: 'text',
+      // responseType: '',
       params: {
         'plant': plant,
         'unitno': unitno
