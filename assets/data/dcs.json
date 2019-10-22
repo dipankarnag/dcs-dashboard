@@ -1,0 +1,100 @@
+{
+    "ktps": {
+        "1": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "2": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "3": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "4": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "5": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "6": {
+            "configured": false,
+            "status": "not-configured"
+        }
+    },
+    "bktpp": {
+        "1": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "2": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "3": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "4": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "5": {
+            "configured": true,
+            "status": "buffering"
+        }
+    },
+    "btps": {
+        "1": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "2": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "3": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "4": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "5": {
+            "configured": true,
+            "status": "buffering"
+        }
+    },
+    "stps": {
+        "5": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "6": {
+            "configured": true,
+            "status": "buffering"
+        }
+    },
+    "sgtpp": {
+        "1": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "2": {
+            "configured": true,
+            "status": "buffering"
+        },
+        "3": {
+            "configured": false,
+            "status": "not-configured"
+        },
+        "4": {
+            "configured": false,
+            "status": "not-configured"
+        }
+    }
+}
