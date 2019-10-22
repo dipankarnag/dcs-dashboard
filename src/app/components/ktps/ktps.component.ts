@@ -11,8 +11,10 @@ export class KtpsComponent implements OnInit, OnChanges {
 
   public innerWidth: any;
 
-  @Input('ktpsLinks') ktpsLinks: any;
-  public ktpsUnits = [];
+  @Input('unitLinks') unitLinks: any;
+  public units = [];
+
+  @Input('plantName') plantName: string;
 
   constructor(private dcsService: DcsService) { }
 
@@ -20,31 +22,32 @@ export class KtpsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    if (this.ktpsLinks !== undefined) {
-      for (const unitno of Object.keys(this.ktpsLinks)) {
-        this.ktpsUnits.push({
+    if (this.unitLinks !== undefined) {
+      console.log(this.unitLinks, this.plantName);
+      for (const unitno of Object.keys(this.unitLinks)) {
+        this.units.push({
           'unitno': unitno,
-          'configured': this.ktpsLinks[unitno]['configured'],
-          'status': this.ktpsLinks[unitno]['status'],
+          'configured': this.unitLinks[unitno]['configured'],
+          'status': this.unitLinks[unitno]['status'],
           'color': ''
         });
-        if (this.ktpsLinks[unitno]['configured'] !== false) {
-          this.dcsService.getDcsData('ktps', unitno)
+        if (this.unitLinks[unitno]['configured'] !== false) {
+          this.dcsService.getDcsData(this.plantName, unitno)
           .subscribe(response => {
             const targetUnitno = response.url.split('&unitno=')[1];
-            const targetIndex = this.ktpsUnits.findIndex(unit => unit.unitno === targetUnitno);
-            this.ktpsUnits[targetIndex]['data'] = response.body;
-            this.ktpsUnits[targetIndex]['status'] = 'available';
-            this.ktpsUnits[targetIndex]['color'] = 'accent';
+            const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
+            this.units[targetIndex]['data'] = response.body;
+            this.units[targetIndex]['status'] = 'available';
+            this.units[targetIndex]['color'] = 'accent';
             console.log(response);
           }, error => {
             // const targetUnitno = response.url.split('&unitno=')[1];
             // const targetIndex = this.ktpsUnits.findIndex(unit => unit.unitno === targetUnitno);
             const targetUnitno = error.url.split('&unitno=')[1];
-            const targetIndex = this.ktpsUnits.findIndex(unit => unit.unitno === targetUnitno);
-            this.ktpsUnits[targetIndex]['data'] = error.body;
-            this.ktpsUnits[targetIndex]['status'] = 'not-available';
-            this.ktpsUnits[targetIndex]['color'] = 'warn';
+            const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
+            this.units[targetIndex]['data'] = error.body;
+            this.units[targetIndex]['status'] = 'not-available';
+            this.units[targetIndex]['color'] = 'warn';
           });
         }
       }

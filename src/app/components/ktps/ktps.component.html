@@ -2,12 +2,12 @@
   <mat-card-header>
     <mat-card-title><mat-icon svgIcon="plant-icon"></mat-icon>
       <!-- <span matBadge="6" matBadgeOverlap="false" matBadgeColor="accent" matBadgeSize="large" mat-elevation-z10>KTPS</span> -->
-      KTPS
+      {{plantName.toUpperCase()}}
     </mat-card-title>
     <mat-card-subtitle>Kolaghat Thermal Power Station</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <button *ngFor="let unit of ktpsUnits"
+    <button *ngFor="let unit of units"
     mat-raised-button [disabled]="unit.status === 'not-configured'" [color]="unit.color" class="unit-card">
       <mat-icon class="buffering" *ngIf="unit.status === 'buffering'">autorenew</mat-icon>U#{{unit.unitno}}</button>
   </mat-card-content>
