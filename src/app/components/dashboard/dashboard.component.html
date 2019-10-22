@@ -2,7 +2,8 @@
 
 <mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
     <mat-grid-tile><app-ktps [plantName]="'ktps'" [unitLinks]="dcsLinks['ktps']" class="plant-card"></app-ktps></mat-grid-tile>
-    <mat-grid-tile><app-bktpp class="plant-card"></app-bktpp></mat-grid-tile>
+    <mat-grid-tile><app-plant [plantName]="'ktps'" [unitLinks]="dcsLinks['ktps']" class="plant-card"></app-plant></mat-grid-tile>
+    <!-- <mat-grid-tile><app-bktpp class="plant-card"></app-bktpp></mat-grid-tile> -->
     <mat-grid-tile><app-btps class="plant-card"></app-btps></mat-grid-tile>
     <mat-grid-tile><app-stps class="plant-card"></app-stps></mat-grid-tile>
     <mat-grid-tile><app-sgtpp class="plant-card"></app-sgtpp></mat-grid-tile>

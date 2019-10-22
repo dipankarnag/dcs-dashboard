@@ -15,6 +15,7 @@ import { BtpsComponent } from './components/btps/btps.component';
 import { StpsComponent } from './components/stps/stps.component';
 import { SgtppComponent } from './components/sgtpp/sgtpp.component';
 import { LegendComponent } from './components/legend/legend.component';
+import { PlantComponent } from './components/plant/plant.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LegendComponent } from './components/legend/legend.component';
     BtpsComponent,
     StpsComponent,
     SgtppComponent,
-    LegendComponent
+    LegendComponent,
+    PlantComponent
   ],
   imports: [
     BrowserModule,
