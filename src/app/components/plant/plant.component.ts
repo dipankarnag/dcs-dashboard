@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
+import * as moment from 'moment';
+
 import { DcsService } from '../../services/dcs.service';
 
 @Component({
@@ -23,7 +25,7 @@ export class PlantComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.unitLinks !== undefined) {
-      console.log(this.unitLinks, this.plantName);
+      // console.log(this.unitLinks, this.plantName);
       for (const unitno of Object.keys(this.unitLinks)) {
         this.units.push({
           'unitno': unitno,
@@ -37,9 +39,14 @@ export class PlantComponent implements OnInit, OnChanges {
             const targetUnitno = response.url.split('&unitno=')[1];
             const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
             this.units[targetIndex]['data'] = response.body;
-            this.units[targetIndex]['status'] = 'syncd';
             this.units[targetIndex]['color'] = 'accent';
-            console.log(response);
+            const responseTimestamp = moment(response.body['timestamp'], 'YYYY_MM_DD_HH_mm_ss');
+            this.units[targetIndex]['timestamp'] = responseTimestamp.format('DD-MMM-YYYY HH:mm:ss');
+            const currentTimeStamp = moment();
+            const diffInTime = moment.duration(currentTimeStamp.diff(responseTimestamp)).asMinutes();
+            this.units[targetIndex]['status'] = (diffInTime < 16) ? 'syncd' : 'not-syncd';
+            // console.log(response);
+            // console.log(this.units);
           }, error => {
             const targetUnitno = error.url.split('&unitno=')[1];
             const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
