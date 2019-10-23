@@ -37,7 +37,7 @@ export class PlantComponent implements OnInit, OnChanges {
             const targetUnitno = response.url.split('&unitno=')[1];
             const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
             this.units[targetIndex]['data'] = response.body;
-            this.units[targetIndex]['status'] = 'available';
+            this.units[targetIndex]['status'] = 'syncd';
             this.units[targetIndex]['color'] = 'accent';
             console.log(response);
           }, error => {
@@ -45,7 +45,7 @@ export class PlantComponent implements OnInit, OnChanges {
             const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
             this.units[targetIndex]['data'] = error.body;
             this.units[targetIndex]['status'] = 'not-available';
-            this.units[targetIndex]['color'] = 'warn';
+            this.units[targetIndex]['color'] = 'accent';
           });
         }
       }
