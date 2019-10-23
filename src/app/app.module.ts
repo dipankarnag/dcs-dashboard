@@ -12,13 +12,15 @@ import { environment } from '../environments/environment';
 
 import { LegendComponent } from './components/legend/legend.component';
 import { PlantComponent } from './components/plant/plant.component';
+import { PlantDataComponent } from './components/plant/plant-data/plant-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     LegendComponent,
-    PlantComponent
+    PlantComponent,
+    PlantDataComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { PlantComponent } from './components/plant/plant.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PlantDataComponent]
 })
 export class AppModule { }

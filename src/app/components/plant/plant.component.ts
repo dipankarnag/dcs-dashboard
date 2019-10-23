@@ -1,8 +1,10 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import * as moment from 'moment';
 
 import { DcsService } from '../../services/dcs.service';
+
+import { PlantDataComponent } from './plant-data/plant-data.component';
 
 @Component({
   selector: 'app-plant',
@@ -18,16 +20,25 @@ export class PlantComponent implements OnInit, OnChanges {
 
   @Input('plantName') plantName: string;
 
-  constructor(private dcsService: DcsService) { }
+  // public dialogConfig: any;
+
+  constructor(
+    private dcsService: DcsService,
+    private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   ngOnChanges() {
+    // this.dialogConfig = new MatDialogConfig();
+    // this.dialogConfig.disableClose = false;
+    // this.dialogConfig.autoFocus = true;
+
     if (this.unitLinks !== undefined) {
       // console.log(this.unitLinks, this.plantName);
       for (const unitno of Object.keys(this.unitLinks)) {
         this.units.push({
+          'plantName': this.plantName,
           'unitno': unitno,
           'configured': this.unitLinks[unitno]['configured'],
           'status': this.unitLinks[unitno]['status'],
@@ -47,6 +58,7 @@ export class PlantComponent implements OnInit, OnChanges {
             this.units[targetIndex]['status'] = (diffInTime < 16) ? 'syncd' : 'not-syncd';
             // console.log(response);
             // console.log(this.units);
+            // this.dialogConfig.data = this.units;
           }, error => {
             const targetUnitno = error.url.split('&unitno=')[1];
             const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
@@ -57,6 +69,16 @@ export class PlantComponent implements OnInit, OnChanges {
         }
       }
     }
+  }
+
+  onShowData(unitno) {
+    const targetIndex = this.units.findIndex(unit => unit.unitno === unitno);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = this.units[targetIndex];
+    // console.log(unitno, this.units[targetIndex], dialogConfig.data);
+    this.dialog.open(PlantDataComponent, dialogConfig);
   }
 
 }
