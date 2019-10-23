@@ -1,0 +1,12 @@
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.table-container {
+    height: 70vh;
+    overflow: auto;
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 0;
+}

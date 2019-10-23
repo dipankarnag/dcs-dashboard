@@ -76,6 +76,7 @@ export class PlantComponent implements OnInit, OnChanges {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
+    dialogConfig.maxHeight = '90vh';
     dialogConfig.data = this.units[targetIndex];
     // console.log(unitno, this.units[targetIndex], dialogConfig.data);
     this.dialog.open(PlantDataComponent, dialogConfig);

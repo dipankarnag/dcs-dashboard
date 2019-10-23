@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatTableDataSource, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-plant-data',
@@ -8,13 +8,27 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class PlantDataComponent implements OnInit {
 
+  tagList: MatTableDataSource<any>;
+  displayedColumns: string[] = [
+    'code',
+    'name',
+    'description',
+    'value',
+    'unit'
+  ];
+
   constructor(
     private dialogRef: MatDialogRef<PlantDataComponent>,
     @Inject(MAT_DIALOG_DATA) public passedData: any
   ) { }
 
   ngOnInit() {
-    console.log('from plant-data', this.passedData);
+    // console.log('from plant-data', this.passedData);
+    this.tagList = new MatTableDataSource(this.passedData.data.tags);
+  }
+
+  onClose() {
+    this.dialogRef.close();
   }
 
 }

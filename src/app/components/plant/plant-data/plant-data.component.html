@@ -1,3 +1,44 @@
-<p>
-  plant-data works!
-</p>
+<mat-toolbar>
+  <span>{{passedData.plantName.toUpperCase()}}: UNIT#{{passedData.unitno}}</span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+
+<div class="table-container mat-elevation-z8">
+  <mat-table [dataSource]="tagList">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>
+        Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="code">
+      <mat-header-cell *matHeaderCellDef>
+        Code
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.code}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="value">
+      <mat-header-cell *matHeaderCellDef>
+        Value
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.value}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="unit">
+      <mat-header-cell *matHeaderCellDef>
+        Unit
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.unit}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>
+        Description
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.description}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
