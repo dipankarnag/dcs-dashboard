@@ -10,11 +10,11 @@ export class PlantDataComponent implements OnInit {
 
   tagList: MatTableDataSource<any>;
   displayedColumns: string[] = [
-    'code',
     'name',
-    'description',
+    // 'code',
     'value',
-    'unit'
+    'unit',
+    'description'
   ];
 
   constructor(

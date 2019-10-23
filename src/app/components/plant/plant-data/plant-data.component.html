@@ -7,28 +7,28 @@
 <div class="table-container mat-elevation-z8">
   <mat-table [dataSource]="tagList">
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef>
+      <mat-header-cell *matHeaderCellDef style="flex: 0 0 25%">
         Name
       </mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+      <mat-cell *matCellDef="let element" style="flex: 0 0 25%">{{(element.name.length < 20) ? element.name : null}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="code">
-      <mat-header-cell *matHeaderCellDef>
+      <mat-header-cell *matHeaderCellDef style="flex: 0 0 30%">
         Code
       </mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.code}}</mat-cell>
+      <mat-cell *matCellDef="let element" style="flex: 0 0 30%">{{element.code}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="value">
-      <mat-header-cell *matHeaderCellDef>
+      <mat-header-cell *matHeaderCellDef style="flex: 0 0 15%">
         Value
       </mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.value}}</mat-cell>
+      <mat-cell *matCellDef="let element" style="flex: 0 0 15%">{{element.value}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="unit">
-      <mat-header-cell *matHeaderCellDef>
+      <mat-header-cell *matHeaderCellDef style="flex: 0 0 10%">
         Unit
       </mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.unit}}</mat-cell>
+      <mat-cell *matCellDef="let element" style="flex: 0 0 10%">{{element.unit}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef>
