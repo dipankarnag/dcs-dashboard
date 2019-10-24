@@ -26,6 +26,14 @@
     padding-right: 10px;
 }
 
+.mat-row:nth-child(even) {
+    background-color: cornsilk;
+}
+
+.mat-row:nth-child(odd) {
+    background-color: white;
+}
+
 @media screen and (max-width: 800px) {
     .mat-cell {
         font-size: 0.7em;
