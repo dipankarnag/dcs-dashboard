@@ -15,7 +15,9 @@
       'not-syncd': unit.status==='not-syncd',
       'not-available': unit.status==='not-available'
     }"
-    (click)="onShowData(unit.unitno)">
+    (click)="onShowData(unit.unitno)"
+    matTooltip="Timestamp:&#13;{{unit.timestamp}}"
+    matTooltipClass="timestamp">
       <mat-icon class="buffering" *ngIf="unit.status === 'buffering'">autorenew</mat-icon>U#{{unit.unitno}}</button>
   </mat-card-content>
 </mat-card>
