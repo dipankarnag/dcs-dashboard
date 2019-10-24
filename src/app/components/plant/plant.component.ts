@@ -21,8 +21,6 @@ export class PlantComponent implements OnInit, OnChanges {
 
   @Input('plantName') plantName: string;
 
-  // public dialogConfig: any;
-
   constructor(
     private dcsService: DcsService,
     private dialog: MatDialog) { }
@@ -31,12 +29,7 @@ export class PlantComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    // this.dialogConfig = new MatDialogConfig();
-    // this.dialogConfig.disableClose = false;
-    // this.dialogConfig.autoFocus = true;
-
     if (this.unitLinks !== undefined) {
-      // console.log(this.unitLinks, this.plantName);
       for (const unitno of Object.keys(this.unitLinks)) {
         this.units.push({
           'plantName': this.plantName,
@@ -57,9 +50,6 @@ export class PlantComponent implements OnInit, OnChanges {
             const currentTimeStamp = moment();
             const diffInTime = moment.duration(currentTimeStamp.diff(responseTimestamp)).asMinutes();
             this.units[targetIndex]['status'] = (diffInTime < 16) ? 'syncd' : 'not-syncd';
-            // console.log(response);
-            // console.log(this.units);
-            // this.dialogConfig.data = this.units;
           }, error => {
             const targetUnitno = error.url.split('&unitno=')[1];
             const targetIndex = this.units.findIndex(unit => unit.unitno === targetUnitno);
@@ -79,7 +69,6 @@ export class PlantComponent implements OnInit, OnChanges {
     dialogConfig.autoFocus = true;
     dialogConfig.maxHeight = '90vh';
     dialogConfig.data = this.units[targetIndex];
-    // console.log(unitno, this.units[targetIndex], dialogConfig.data);
     this.dialog.open(PlantDataComponent, dialogConfig);
   }
 

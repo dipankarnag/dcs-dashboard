@@ -9,9 +9,9 @@
     <button *ngFor="let unit of units"
     mat-raised-button 
     [disabled]="unit.status === 'not-configured'" 
-    class="unit-card unit-grow" 
+    class="unit-card" 
     [ngClass]="{
-      'syncd': unit.status==='syncd',
+      'syncd unit-grow': unit.status==='syncd',
       'not-syncd': unit.status==='not-syncd',
       'not-available': unit.status==='not-available'
     }"
