@@ -9,4 +9,29 @@
 
 ::ng-deep .mat-dialog-container {
     padding: 0;
+    width: 100vw;
+}
+
+.btn-dialog-close {
+    background-color: #d6d6d6;
+}
+
+.mat-header-cell {
+    background-color: #d9dadc;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.mat-cell, .mat-header-cell {
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .mat-cell {
+        font-size: 0.7em;
+    }
+
+    .mat-header-cell {
+        font-size: 0.8em;
+    }
 }
