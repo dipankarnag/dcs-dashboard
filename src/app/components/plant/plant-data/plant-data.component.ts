@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { MatTableDataSource, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-plant-data',
@@ -20,6 +21,16 @@ export class PlantDataComponent implements OnInit {
     'description'
   ];
 
+  nameFilter = new FormControl('');
+  codeFilter = new FormControl('');
+  descriptionFilter = new FormControl('');
+
+  filterValues = {
+    name: '',
+    code: '',
+    description: ''
+  };
+
   constructor(
     private dialogRef: MatDialogRef<PlantDataComponent>,
     @Inject(MAT_DIALOG_DATA) public passedData: any
@@ -28,7 +39,39 @@ export class PlantDataComponent implements OnInit {
   ngOnInit() {
     this.tagList = new MatTableDataSource(this.passedData.data.tags);
     this.modifyDataInTable((window.innerWidth < 650) ? 21 : 50);
-    console.log();
+    this.tagList.filterPredicate = this.createFilter();
+
+    this.nameFilter.valueChanges
+        .subscribe(
+          name => {
+            this.filterValues.name = name;
+            this.tagList.filter = JSON.stringify(this.filterValues);
+          }
+        );
+    this.codeFilter.valueChanges
+        .subscribe(
+          code => {
+            this.filterValues.code = name;
+            this.tagList.filter = JSON.stringify(this.filterValues);
+          }
+        );
+    this.descriptionFilter.valueChanges
+        .subscribe(
+          description => {
+            this.filterValues.description = description;
+            this.tagList.filter = JSON.stringify(this.filterValues);
+          }
+        );
+  }
+
+  createFilter(): (data: any, filter: string) => boolean {
+    const filterFunction = function (data, filter): boolean {
+      const searchTerms = JSON.parse(filter);
+      return data.name.toLowerCase().indexOf(searchTerms.name.toLowerCase()) !== -1
+            && data.code.toLowerCase().indexOf(searchTerms.code.toLowerCase()) !== -1
+            && data.description.toLowerCase().indexOf(searchTerms.description.toLowerCase()) !== -1;
+    };
+    return filterFunction;
   }
 
   onClose() {

@@ -16,7 +16,7 @@
     background-color: #d6d6d6;
 }
 
-.mat-header-cell {
+.mat-header-row {
     background-color: #d9dadc;
     font-weight: bold;
     font-size: 1em;
@@ -32,6 +32,16 @@
 
 .mat-row:nth-child(odd) {
     background-color: white;
+}
+
+.filterHeader {
+    display: block;
+    padding-top: 1em;
+}
+
+.filter {
+    display: block;
+    padding-right: 2em;
 }
 
 @media screen and (max-width: 800px) {
