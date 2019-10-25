@@ -43,6 +43,10 @@
     background-color: white;
 }
 
+.mat-row:hover {
+    background-color: burlywood;
+}
+
 .filterHeader {
     display: block;
     padding-top: 1em;
@@ -61,6 +65,14 @@
 
 .display-column-header-text {
     display: none;
+}
+
+.timestamp {
+    color: #15ff15;
+    font-family: monospace;
+    font-weight: bold;
+    background: black;
+    border: inset;
 }
 
 @media screen and (max-width: 800px) {
@@ -85,4 +97,12 @@
         font-weight: bold !important;
         font-size: 1em !important;
     }
+
+    .timestamp {
+        font-size: 1em;
+    }
+
+    // .timestamp-text {
+    //     display: none;
+    // }
 }
