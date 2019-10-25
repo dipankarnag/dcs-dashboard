@@ -2,6 +2,8 @@ import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular
 
 import { DcsService } from '../../services/dcs.service';
 
+declare var require: any;
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -18,6 +20,8 @@ export class DashboardComponent implements OnInit {
   public mainGridRows: any;
   public gutterSpace: any;
   public dcsLinks: any = {};
+
+  logoPath = require('../../../assets/logo/logo-1.svg');
 
   constructor(private dcsService: DcsService) { }
 
