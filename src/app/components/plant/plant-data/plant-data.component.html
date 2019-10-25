@@ -9,9 +9,10 @@
   <mat-table [dataSource]="tagList" #tableView>
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef style="flex: 0 0 40%" class="filterHeader">
-        Name
+        <span class="column-header-text">Name</span>
         <mat-form-field floatLabel="never" class="filter">
-          <mat-label>Search</mat-label>
+          <mat-label class="display-search">Search</mat-label>
+          <mat-label class="display-column-header-text">Name</mat-label>
           <input matInput [formControl]="nameFilter">
         </mat-form-field>
       </mat-header-cell>
@@ -19,7 +20,7 @@
     </ng-container>
     <ng-container matColumnDef="code">
       <mat-header-cell *matHeaderCellDef style="flex: 0 0 30%" class="filterHeader">
-        Code
+          <span class="column-header-text">Code</span>
         <mat-form-field floatLabel="never" class="filter">
           <mat-label>Search</mat-label>
           <input matInput [formControl]="codeFilter">
@@ -29,21 +30,22 @@
     </ng-container>
     <ng-container matColumnDef="value">
       <mat-header-cell *matHeaderCellDef style="flex: 0 0 15%">
-        Value<br>&nbsp;
+        <span class="no-search-column-header-text">Value</span>
       </mat-header-cell>
       <mat-cell *matCellDef="let element" style="flex: 0 0 15%; color: red">{{element.value}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="unit">
       <mat-header-cell *matHeaderCellDef style="flex: 0 0 10%">
-        Unit<br>&nbsp;
+        <span class="no-search-column-header-text">Unit</span>
       </mat-header-cell>
       <mat-cell *matCellDef="let element" style="flex: 0 0 10%">{{element.unit}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef class="filterHeader">
-        Description
+        <span class="column-header-text">Description</span>
         <mat-form-field floatLabel="never" class="filter">
-          <mat-label>Search</mat-label>
+          <mat-label class="display-search">Search</mat-label>
+          <mat-label class="display-column-header-text">Description</mat-label>
           <input matInput [formControl]="descriptionFilter">
         </mat-form-field>
       </mat-header-cell>
