@@ -20,6 +20,10 @@ export class AppComponent implements OnInit {
       'plant-icon',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/custom-icons/plant-icon.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'pdcl-icon',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/custom-icons/pdcl-logo.svg')
+    );
   }
 
   ngOnInit() {
