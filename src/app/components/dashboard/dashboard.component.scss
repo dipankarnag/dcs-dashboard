@@ -41,8 +41,11 @@ mat-grid-tile {
     }
 }
 
-// .plant-card {
-//     background-color: red;
-//     height: 90%;
-//     width: 95%;
-// }
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.reload-button {
+    font-size: 1.5em;
+    font-weight: bold;
+}

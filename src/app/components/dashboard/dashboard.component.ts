@@ -42,4 +42,8 @@ export class DashboardComponent implements OnInit {
     // console.log(this.innerWidth, this.innerHeight, this.topBarHeight, this.topBar, this.gutterSpace);
   }
 
+  onReload() {
+    window.location.reload();
+  }
+
 }

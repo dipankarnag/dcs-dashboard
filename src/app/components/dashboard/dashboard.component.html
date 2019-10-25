@@ -1,4 +1,8 @@
-<mat-toolbar #topBar color="primary" class="mat-elevation-z1">DCS Dashboard</mat-toolbar>
+<mat-toolbar #topBar color="primary" class="mat-elevation-z1">
+    <span>Dashboard</span>
+    <span class="fill-remaining-space"></span>
+    <button mat-mini-fab class="mat-elevation-z0" (click)="onReload()"><mat-icon>refresh</mat-icon></button>
+</mat-toolbar>
 
 <mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
     <mat-grid-tile><app-plant [plantName]="'ktps'" [unitLinks]="dcsLinks['ktps']" class="plant-card"></app-plant></mat-grid-tile>
