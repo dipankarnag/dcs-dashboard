@@ -1,7 +1,7 @@
 {
     "/dcs-api/": {
-        "target": "http://192.168.12.245/",
-        "secure": false,
+        "target": "https://wbpdcl.co.in/",
+        "secure": true,
         "changeOrigin": true
     }
 }

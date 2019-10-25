@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --port 4400 --proxy-config proxyconfig.json",
+    "start": "ng serve --host 0.0.0.0 --port 4400",
     "build:apache-prod": "ng build --prod --base-href /dcs-dashboard/",
     "start:lite-prod": "ng build --prod && lite-server",
     "build:ghpages-prod": "ng build --prod --base-href https://dipankarnag.github.io/dcs-dashboard/",

@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class DcsService {
 
   private _dcsLinkUrl = 'assets/data/dcs.json';
-  private _getDcsDataUrl = '/dcs-api/get_dcs_data.php';
+  private _getDcsDataUrl = 'https://wbpdcl.co.in/dcs-proxy-api/get_dcs_data.php';
 
   constructor(private http: HttpClient) { }
 
@@ -15,16 +15,9 @@ export class DcsService {
     return this.http.get(this._dcsLinkUrl);
   }
 
-  // getDcsData(plant, unitno, url) {
-  //   return this.http.post(this._getDcsDataUrl, {
-  //     'url': url
-  //   }, {observe: 'response', responseType: 'text', params: { 'plant': plant, 'unitno': unitno }});
-  // }
-
   getDcsData(plant, unitno) {
     return this.http.get(this._getDcsDataUrl, {
       observe: 'response',
-      // responseType: '',
       params: {
         'plant': plant,
         'unitno': unitno
