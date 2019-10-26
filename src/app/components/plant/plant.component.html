@@ -2,9 +2,9 @@
   <mat-card-header>
     <mat-card-title>
       <mat-icon svgIcon="plant-icon"></mat-icon>
-      {{plantName.toUpperCase()}}
+      {{plantShortName}}
     </mat-card-title>
-    <mat-card-subtitle>Kolaghat Thermal Power Station</mat-card-subtitle>
+    <mat-card-subtitle>{{plantFullName}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <button *ngFor="let unit of units"

@@ -1,6 +1,4 @@
 <mat-toolbar #topBar color="primary" class="mat-elevation-z1">
-    <!-- <mat-icon svgIcon="pdcl-icon"></mat-icon> -->
-    <!-- <img src="/dcs-dashboard/assets/logo/logo-1.svg" height="45em" width="45em" /> -->
     <img [src]="logoPath" height="45em" width="45em" />
     <span style="width: 0.5em"></span>
     <span>DCS Dashboard</span>
@@ -9,15 +7,15 @@
 </mat-toolbar>
 
 <mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
-    <mat-grid-tile><app-plant [plantName]="'ktps'" [unitLinks]="dcsLinks['ktps']" class="plant-card"></app-plant></mat-grid-tile>
-    <mat-grid-tile><app-plant [plantName]="'bktpp'" [unitLinks]="dcsLinks['bktpp']" class="plant-card"></app-plant></mat-grid-tile>
-    <mat-grid-tile><app-plant [plantName]="'btps'" [unitLinks]="dcsLinks['btps']" class="plant-card"></app-plant></mat-grid-tile>
-    <mat-grid-tile><app-plant [plantName]="'stps'" [unitLinks]="dcsLinks['stps']" class="plant-card"></app-plant></mat-grid-tile>
-    <mat-grid-tile><app-plant [plantName]="'sgtpp'" [unitLinks]="dcsLinks['sgtpp']" class="plant-card"></app-plant></mat-grid-tile>
-    <!-- <mat-grid-tile><div class="plant-card"></div></mat-grid-tile> -->
-    <!-- <mat-grid-tile><div class="plant-card"></div></mat-grid-tile> -->
-    <!-- <mat-grid-tile><div class="plant-card"></div></mat-grid-tile> -->
-    <!-- <mat-grid-tile><div class="plant-card"></div></mat-grid-tile> -->
+    <mat-grid-tile *ngFor="let eachPlant of dcs2Links">
+        <app-plant
+            [plantName]="eachPlant.plantName"
+            [plantShortName]="eachPlant.plantShortName"
+            [plantFullName]="eachPlant.plantFullName"
+            [unitLinks]="eachPlant.units"
+            class="plant-card">
+        </app-plant>
+    </mat-grid-tile>
 
     <mat-grid-tile><app-legend class="plant-card"></app-legend></mat-grid-tile>
 </mat-grid-list>

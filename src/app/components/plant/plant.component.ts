@@ -20,6 +20,8 @@ export class PlantComponent implements OnInit, OnChanges {
   public units = [];
 
   @Input('plantName') plantName: string;
+  @Input('plantShortName') plantShortName: string;
+  @Input('plantFullName') plantFullName: string;
 
   constructor(
     private dcsService: DcsService,
