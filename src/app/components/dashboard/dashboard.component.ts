@@ -19,8 +19,8 @@ export class DashboardComponent implements OnInit {
   @ViewChild('mainGrid') mainGrid: ElementRef|any;
   public mainGridRows: any;
   public gutterSpace: any;
-  public dcsLinks: any = {};
-  public dcs2Links: any = [];
+  public dcsLinks: any = [];
+  // public dcs2Links: any = [];
 
   logoPath = require('../../../assets/logo/logo-1.svg');
 
@@ -28,13 +28,13 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.matGridRowHeight = 0;
+    // this.dcsService.getDcsLinks().subscribe(
+    //   data => {
+    //     this.dcsLinks = data;
+    //   }, err => console.error(err));
     this.dcsService.getDcsLinks().subscribe(
       data => {
         this.dcsLinks = data;
-      }, err => console.error(err));
-    this.dcsService.getDcs2Links().subscribe(
-      data => {
-        this.dcs2Links = data;
       }, err => console.error(err));
   }
 

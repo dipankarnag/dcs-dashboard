@@ -7,7 +7,7 @@
 </mat-toolbar>
 
 <mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
-    <mat-grid-tile *ngFor="let eachPlant of dcs2Links">
+    <mat-grid-tile *ngFor="let eachPlant of dcsLinks">
         <app-plant
             [plantName]="eachPlant.plantName"
             [plantShortName]="eachPlant.plantShortName"
