@@ -16,7 +16,8 @@
         "/dcs-dashboard/main.0af2aa0c1081c89ee817.js",
         "/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js",
         "/dcs-dashboard/runtime.a66f828dca56eeb90e02.js",
-        "/dcs-dashboard/styles.897cc839b61f2a4c8ff9.css"
+        "/dcs-dashboard/styles.897cc839b61f2a4c8ff9.css",
+        "/dcs-dashboard/ngsw.json"
       ],
       "patterns": []
     },
