@@ -6,17 +6,7 @@
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
-      "urls": [
-        "/dcs-dashboard/MaterialIcons-Regular.012cf6a10129e2275d79.woff",
-        "/dcs-dashboard/MaterialIcons-Regular.570eb83859dc23dd0eec.woff2",
-        "/dcs-dashboard/favicon.ico",
-        "/dcs-dashboard/index.html",
-        "/dcs-dashboard/logo-1.3b782266159420ccdd95.svg",
-        "/dcs-dashboard/main.3049f46fb34919d4fc86.js",
-        "/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js",
-        "/dcs-dashboard/runtime.a66f828dca56eeb90e02.js",
-        "/dcs-dashboard/styles.897cc839b61f2a4c8ff9.css"
-      ],
+      "urls": [],
       "patterns": []
     },
     {
@@ -40,8 +30,6 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/dcs-dashboard/MaterialIcons-Regular.012cf6a10129e2275d79.woff": "c6c953c2ccb2ca9abb21db8dbf473b5a435f0082",
-    "/dcs-dashboard/MaterialIcons-Regular.570eb83859dc23dd0eec.woff2": "09963592e8c953cc7e14e3fb0a5b05d5042e8435",
     "/dcs-dashboard/assets/custom-icons/pdcl-logo.svg": "9a549d337289623e7b0ccdff6133cc5d61896515",
     "/dcs-dashboard/assets/custom-icons/plant-icon.svg": "831cc63eee01762a5aaacd77fd49bf419521a70d",
     "/dcs-dashboard/assets/data/dcs.json": "39c1dcd1a3412566fe9a1da5c2f5d8b1f67af601",
@@ -51,14 +39,7 @@
     "/dcs-dashboard/assets/icons/icon-512x512.png": "d0705b83088fa86b2eae2de393f39789b2c391ed",
     "/dcs-dashboard/assets/icons/icon-72x72.png": "09259bceff38cfc36e11665c204cf8a7efef6357",
     "/dcs-dashboard/assets/icons/icon-96x96.png": "3a362a45ac5fb3f53637f6dbaf13c07a146d9cdc",
-    "/dcs-dashboard/assets/logo/logo-1.svg": "a9b3822458d4fd6610909aa1ef5fcf0e714bf04b",
-    "/dcs-dashboard/favicon.ico": "a6152d98c916b685690133d9b9aab98a2914773c",
-    "/dcs-dashboard/index.html": "2d8658c60bad35a5a57403ddd48d1bdef8501075",
-    "/dcs-dashboard/logo-1.3b782266159420ccdd95.svg": "a9b3822458d4fd6610909aa1ef5fcf0e714bf04b",
-    "/dcs-dashboard/main.3049f46fb34919d4fc86.js": "8d85f8ba9c4ecae8bf482d587ccc2c31a51f73c3",
-    "/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js": "ddf35f345b37339fe434522df96f2461f4cefa80",
-    "/dcs-dashboard/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/dcs-dashboard/styles.897cc839b61f2a4c8ff9.css": "edf712bc4b1011aa866daf7093f063d3b93dc32d"
+    "/dcs-dashboard/assets/logo/logo-1.svg": "a9b3822458d4fd6610909aa1ef5fcf0e714bf04b"
   },
   "navigationUrls": [
     {
