@@ -7,8 +7,11 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
+        "/dcs-dashboard/MaterialIcons-Regular.012cf6a10129e2275d79.woff",
+        "/dcs-dashboard/MaterialIcons-Regular.570eb83859dc23dd0eec.woff2",
         "/dcs-dashboard/favicon.ico",
         "/dcs-dashboard/index.html",
+        "/dcs-dashboard/logo-1.f90871ea7a5a7d4b1b26.svg",
         "/dcs-dashboard/main.b0b887bffeec32135417.js",
         "/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js",
         "/dcs-dashboard/runtime.a66f828dca56eeb90e02.js",
@@ -37,6 +40,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/dcs-dashboard/MaterialIcons-Regular.012cf6a10129e2275d79.woff": "c6c953c2ccb2ca9abb21db8dbf473b5a435f0082",
+    "/dcs-dashboard/MaterialIcons-Regular.570eb83859dc23dd0eec.woff2": "09963592e8c953cc7e14e3fb0a5b05d5042e8435",
     "/dcs-dashboard/assets/custom-icons/pdcl-logo.svg": "68c6a4cacde0b3f15c0b98acd6a1957f7a6da9b1",
     "/dcs-dashboard/assets/custom-icons/plant-icon.svg": "0874889c9bd48d80c8db403bcb57122cea60f36a",
     "/dcs-dashboard/assets/data/dcs.json": "39c1dcd1a3412566fe9a1da5c2f5d8b1f67af601",
@@ -49,6 +54,7 @@
     "/dcs-dashboard/assets/logo/logo-1.svg": "69d649f682123b284a5e5ba4c05620b3094f0c9e",
     "/dcs-dashboard/favicon.ico": "a6152d98c916b685690133d9b9aab98a2914773c",
     "/dcs-dashboard/index.html": "3f5db8d8c35eee9ac3a287a94d7368d5026db305",
+    "/dcs-dashboard/logo-1.f90871ea7a5a7d4b1b26.svg": "69d649f682123b284a5e5ba4c05620b3094f0c9e",
     "/dcs-dashboard/main.b0b887bffeec32135417.js": "c9f57adb6ffe01b0a7b8d8023c7937366f03e9ee",
     "/dcs-dashboard/polyfills.50aa5bb6102ae74ed53f.js": "ddf35f345b37339fe434522df96f2461f4cefa80",
     "/dcs-dashboard/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
