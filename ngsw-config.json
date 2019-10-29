@@ -9,7 +9,10 @@
           "/favicon.ico",
           "/index.html",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/*.svg",
+          "/*.tff",
+          "/*.woff*"
         ]
       }
     }, {

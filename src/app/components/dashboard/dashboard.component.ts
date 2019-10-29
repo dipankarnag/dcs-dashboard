@@ -41,13 +41,12 @@ export class DashboardComponent implements OnInit {
   @HostListener('window:load', ['$event'])
   @HostListener('window:resize', ['$event'])
   onrender() {
-    this.innerWidth = window.innerWidth;
-    this.innerHeight = window.innerHeight;
-    this.topBarHeight = this.topBar._elementRef.nativeElement.offsetHeight;
-    this.mainGridRows = this.mainGrid._tileStyler._rows;
-    this.gutterSpace = parseInt(this.mainGrid._gutter.substring(0, this.mainGrid._gutter.length - 2), 10);
-    this.matGridRowHeight = ((this.innerHeight - this.topBarHeight) / this.mainGridRows) - this.gutterSpace;
-    // console.log(this.innerWidth, this.innerHeight, this.topBarHeight, this.topBar, this.gutterSpace);
+    // this.innerWidth = window.innerWidth;
+    // this.innerHeight = window.innerHeight;
+    // this.topBarHeight = this.topBar._elementRef.nativeElement.offsetHeight;
+    // this.mainGridRows = this.mainGrid._tileStyler._rows;
+    // this.gutterSpace = parseInt(this.mainGrid._gutter.substring(0, this.mainGrid._gutter.length - 2), 10);
+    // this.matGridRowHeight = ((this.innerHeight - this.topBarHeight) / this.mainGridRows) - this.gutterSpace;
   }
 
   onReload() {

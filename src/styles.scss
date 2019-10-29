@@ -14,7 +14,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #292a1d;
-    height: 100vh;
+    // height: 100vh !important;
+    // width: 100vw !important;
 }
 
 a {
@@ -23,5 +24,6 @@ a {
 }
 
 .mat-app-background {
-    height: 100vh;
+    // height: 100vh;
+    // width: 100vw;
 }

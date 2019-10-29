@@ -1,12 +1,12 @@
-<mat-toolbar #topBar color="primary" class="mat-elevation-z1">
+<mat-toolbar #topBar color="primary" class="mat-elevation-z1 header-toolbar">
     <img [src]="logoPath" height="45em" width="45em" />
     <span style="width: 0.5em"></span>
     <span>DCS Dashboard</span>
     <span class="fill-remaining-space"></span>
     <button mat-mini-fab class="mat-elevation-z0" (click)="onReload()"><mat-icon>refresh</mat-icon></button>
 </mat-toolbar>
-
-<mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
+<mat-toolbar color="primary" class="mat-elevation-z1"></mat-toolbar>
+<!-- <mat-grid-list #mainGrid cols="3" rowHeight="{{matGridRowHeight}}px">
     <mat-grid-tile *ngFor="let eachPlant of dcsLinks">
         <app-plant
             [plantName]="eachPlant.plantName"
@@ -18,4 +18,28 @@
     </mat-grid-tile>
 
     <mat-grid-tile><app-legend class="plant-card"></app-legend></mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+<!-- <div class="main-container">
+    <div *ngFor="let eachPlant of dcsLinks" class="plant-container">
+        <app-plant
+            [plantName]="eachPlant.plantName"
+            [plantShortName]="eachPlant.plantShortName"
+            [plantFullName]="eachPlant.plantFullName"
+            [unitLinks]="eachPlant.units">
+        </app-plant>
+    </div>
+</div> -->
+
+<div *ngIf="dcsLinks.length>0" class="main-container">
+        <app-plant *ngFor="let eachPlant of dcsLinks" class="plant-container"
+            [plantName]="eachPlant.plantName"
+            [plantShortName]="eachPlant.plantShortName"
+            [plantFullName]="eachPlant.plantFullName"
+            [unitLinks]="eachPlant.units">
+        </app-plant>
+        <!-- <mat-card *ngFor="let each">
+            <mat-card-header>Plant</mat-card-header>
+        </mat-card> -->
+        <!-- <div *ngFor="let eachPlant of dcsLinks" class="plant-container"></div> -->
+</div>

@@ -15,6 +15,8 @@ import { LegendComponent } from './components/legend/legend.component';
 import { PlantComponent } from './components/plant/plant.component';
 import { PlantDataComponent } from './components/plant/plant-data/plant-data.component';
 
+// import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { PlantDataComponent } from './components/plant/plant-data/plant-data.com
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    // FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

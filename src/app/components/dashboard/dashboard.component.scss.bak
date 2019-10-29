@@ -1,0 +1,38 @@
+$plant-cards: ktps, bktpp, btps, stps, sgtpp, legned;
+
+mat-grid-tile {
+    .plant-card {
+        background-color: lightblue;
+        height: 95%;
+        width: 97%;
+        opacity: 0;
+        animation: plant-card-animation 500ms ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @for $i from 1 to length($plant-cards)+1 {
+        &:nth-child(#{$i}) .plant-card {
+            animation-delay: 100ms * $i;
+        }
+    }
+}
+
+@keyframes plant-card-animation {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.reload-button {
+    font-size: 1.5em;
+    font-weight: bold;
+}
