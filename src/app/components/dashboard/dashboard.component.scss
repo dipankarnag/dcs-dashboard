@@ -1,6 +1,7 @@
 .header-toolbar {
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .fill-remaining-space {
@@ -12,7 +13,7 @@
     // justify-content: center;
     // vertical-align: middle;
     // max-height: 200vh !important;
-    width: 100vw;
+    // width: 100vw;
 }
 
 .plant-container {
