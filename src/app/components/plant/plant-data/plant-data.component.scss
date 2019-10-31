@@ -3,13 +3,27 @@
 }
 
 .table-container {
-    height: 70vh;
+    height: 75vh;
+    // width: 1000px;
     overflow: auto;
+    overflow-x: scroll;
+}
+
+table {
+    width: 1000px;
+}
+
+.table-header {
+    white-space: normal;
+}
+
+.table-header-text {
+    font-size: 0.8em;
 }
 
 ::ng-deep .mat-dialog-container {
     padding: 0;
-    width: 100vw;
+    // width: 100vw;
 }
 
 .btn-dialog-close {
@@ -33,6 +47,8 @@
 
 .mat-cell, .mat-header-cell {
     padding-right: 10px;
+    font-size: 0.7em;
+    word-break: break-all;
 }
 
 .mat-row:nth-child(even) {
@@ -67,42 +83,57 @@
     display: none;
 }
 
-.timestamp {
+.table-header {
+    white-space: normal;
+}
+
+.data-timestamp {
     color: #15ff15;
     font-family: monospace;
     font-weight: bold;
+    font-size: 0.8em;
     background: black;
     border: inset;
+    margin: 0 0.5em;
+    line-height: 1em;
+    text-align: center;
 }
+
 
 @media screen and (max-width: 800px) {
-    .mat-cell {
-        font-size: 0.7em;
-    }
-
-    .mat-header-cell {
-        font-size: 0.8em !important;
-    }
-
-    .column-header-text {
+    .hide-column {
         display: none;
     }
-
-    .display-search {
-        display: none;
-    }
-
-    .display-column-header-text {
-        display: inline;
-        font-weight: bold !important;
-        font-size: 1em !important;
-    }
-
-    .timestamp {
-        font-size: 1em;
-    }
-
-    // .timestamp-text {
-    //     display: none;
-    // }
 }
+
+// @media screen and (max-width: 800px) {
+//     .mat-cell {
+//         font-size: 0.7em;
+//     }
+
+//     .mat-header-cell {
+//         font-size: 0.8em !important;
+//     }
+
+//     .column-header-text {
+//         display: none;
+//     }
+
+//     .display-search {
+//         display: none;
+//     }
+
+//     .display-column-header-text {
+//         display: inline;
+//         font-weight: bold !important;
+//         font-size: 1em !important;
+//     }
+
+//     .timestamp {
+//         font-size: 1em;
+//     }
+
+//     // .timestamp-text {
+//     //     display: none;
+//     // }
+// }

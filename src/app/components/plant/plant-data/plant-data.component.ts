@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, OnChanges, Inject, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { MatTableDataSource, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormControl } from '@angular/forms';
 
@@ -41,7 +41,7 @@ export class PlantDataComponent implements OnInit {
   ngOnInit() {
     this.timestamp = this.passedData.timestamp;
     this.tagList = new MatTableDataSource(this.passedData.data.tags);
-    this.modifyDataInTable((window.innerWidth < 650) ? 21 : 50);
+    // this.modifyDataInTable((window.innerWidth < 650) ? 21 : 50);
     this.tagList.filterPredicate = this.createFilter();
 
     this.nameFilter.valueChanges
@@ -81,11 +81,11 @@ export class PlantDataComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  @HostListener('window:load', ['$event'])
-  @HostListener('window:resize', ['$event'])
-  onrender() {
-    this.modifyDataInTable((window.innerWidth < 650) ? 21 : 50);
-  }
+  // @HostListener('window:load', ['$event'])
+  // @HostListener('window:resize', ['$event'])
+  // onrender() {
+  //   this.modifyDataInTable((window.innerWidth < 650) ? 21 : 50);
+  // }
 
   breakString(str: string, breakLength: number) {
     return (str.length <= breakLength) ?

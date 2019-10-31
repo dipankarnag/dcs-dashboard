@@ -1,13 +1,13 @@
-<mat-toolbar>
-  <span>{{passedData.plantName.toUpperCase()}}[U#{{passedData.unitno}}]</span>
+<mat-toolbar class="table-header">
+  <span class="table-header-text">{{passedData.plantName.toUpperCase()}}[U#{{passedData.unitno}}]</span>
   <span class="fill-remaining-space"></span>
-  <span class="timestamp">{{timestamp}}</span>
+  <span class="data-timestamp">{{timestamp}}</span>
   <button class="btn-dialog-close mat-elevation-z0" mat-mini-fab (click)="onClose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
 </mat-toolbar>
 
 <div class="table-container mat-elevation-z8">
   <mat-table [dataSource]="tagList" #tableView>
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="name" sticky>
       <mat-header-cell *matHeaderCellDef style="flex: 0 0 40%" class="filterHeader">
         <span class="column-header-text">Name</span>
         <mat-form-field floatLabel="never" class="filter">
@@ -19,14 +19,14 @@
       <mat-cell *matCellDef="let element" style="flex: 0 0 40%">{{element.name}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="code">
-      <mat-header-cell *matHeaderCellDef style="flex: 0 0 30%" class="filterHeader">
+      <mat-header-cell *matHeaderCellDef class="filterHeader">
           <span class="column-header-text">Code</span>
         <mat-form-field floatLabel="never" class="filter">
           <mat-label>Search</mat-label>
           <input matInput [formControl]="codeFilter">
         </mat-form-field>
       </mat-header-cell>
-      <mat-cell *matCellDef="let element" style="flex: 0 0 30%">{{element.code}}</mat-cell>
+      <mat-cell *matCellDef="let element">{{element.code}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="value">
       <mat-header-cell *matHeaderCellDef style="flex: 0 0 15%">
@@ -41,7 +41,7 @@
       <mat-cell *matCellDef="let element" style="flex: 0 0 10%">{{element.unit}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="description">
-      <mat-header-cell *matHeaderCellDef class="filterHeader">
+      <mat-header-cell *matHeaderCellDef class="filterHeader hide-column">
         <span class="column-header-text">Description</span>
         <mat-form-field floatLabel="never" class="filter">
           <mat-label class="display-search">Search</mat-label>
@@ -49,7 +49,7 @@
           <input matInput [formControl]="descriptionFilter">
         </mat-form-field>
       </mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.description}}</mat-cell>
+      <mat-cell *matCellDef="let element" class="hide-column">{{element.description}}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
