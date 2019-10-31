@@ -5,3 +5,15 @@ $app-accent: mat-palette($mat-green);
 $app-warn: mat-palette($mat-red);
 
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+.syncd {
+    background-color: mat-color($app-accent);
+}
+
+.not-syncd {
+    background-color: #ff9838;
+}
+
+.not-available {
+    background-color: mat-color($app-warn);
+}

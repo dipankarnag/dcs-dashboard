@@ -1,27 +1,39 @@
-mat-card {
+@import '../../theme';
+
+.plant-card {
+    padding: 0 !important;
+}
+
+.plant-card .mat-card {
     position: static !important;
     padding: 0 !important;
 }
 
-mat-card-header {
+.plant-card .mat-card-header {
     background-color: black;
     color: white;
 }
 
-mat-card-title {
+.plant-card .mat-card-title {
     width: max-content;
 }
 
-mat-card-subtitle {
+.plant-card .mat-card-subtitle {
     color: white !important;
     margin-bottom: 0.5em !important;
 }
 
-mat-card-content {
+.plant-card .mat-card-content {
     height: 10em;
-    width: 22em;
+    width: 25em;
 }
 
 .unit-card {
     margin: 1em;
+}
+
+@media screen and (max-width: 800px) {
+    .plant-card .mat-card-content {
+        width: 22em !important;
+    }
 }
