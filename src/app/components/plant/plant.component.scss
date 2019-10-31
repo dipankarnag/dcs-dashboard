@@ -32,6 +32,20 @@
     margin: 1em;
 }
 
+.timestamp {
+    font-size: 1.2em;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.unit-grow {
+    transition: transform 0.2s !important;
+}
+
+.unit-grow:hover {
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 800px) {
     .plant-card .mat-card-content {
         width: 22em !important;

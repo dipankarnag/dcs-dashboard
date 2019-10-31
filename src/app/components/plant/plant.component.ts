@@ -9,7 +9,8 @@ import { PlantDataComponent } from './plant-data/plant-data.component';
 @Component({
   selector: 'app-plant',
   templateUrl: './plant.component.html',
-  styleUrls: ['./plant.component.scss']
+  styleUrls: ['./plant.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PlantComponent implements OnInit, OnChanges {
 
