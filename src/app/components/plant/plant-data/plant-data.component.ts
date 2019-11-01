@@ -14,11 +14,11 @@ export class PlantDataComponent implements OnInit {
 
   tagList: MatTableDataSource<any>;
   displayedColumns: string[] = [
-    'name',
+    'description',
     // 'code',
     'value',
     'unit',
-    'description'
+    'name'
   ];
 
   nameFilter = new FormControl('');

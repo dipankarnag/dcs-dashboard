@@ -47,8 +47,8 @@ table {
 
 .mat-cell, .mat-header-cell {
     padding-right: 10px;
-    font-size: 0.7em;
-    word-break: break-all;
+    font-size: initial;
+    // word-break: break-all;
 }
 
 .mat-row:nth-child(even) {
@@ -100,9 +100,15 @@ table {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .hide-column {
         display: none;
+    }
+
+    .mat-cell, .mat-header-cell {
+        // padding-right: 10px;
+        font-size: 0.7em;
+        // word-break: break-all;
     }
 }
 

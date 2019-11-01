@@ -1,5 +1,9 @@
 @import '../../theme';
 
+.mat-dialog-container {
+    width: 100vw !important;
+}
+
 .plant-card {
     padding: 0 !important;
 }
@@ -49,6 +53,10 @@
 @media screen and (max-width: 800px) {
     .plant-card .mat-card-content {
         width: 22em !important;
+    }
+
+    .mat-dialog-container {
+        width: 100%;
     }
 }
 
