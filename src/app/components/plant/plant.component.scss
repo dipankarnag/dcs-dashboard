@@ -28,7 +28,7 @@
 }
 
 .plant-card .mat-card-content {
-    height: 10em;
+    min-height: 10em;
     width: 25em;
 }
 
@@ -48,6 +48,19 @@
 
 .unit-grow:hover {
     transform: scale(1.1);
+}
+
+.buffering {
+    animation: inf-spin 2s infinite linear;
+}
+
+@keyframes inf-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 800px) {
