@@ -22,3 +22,10 @@
     padding: 0;
     display: inline-table;
 }
+
+
+@media screen and (max-width: 800px) {
+    .main-container {
+        min-height: 100vh;
+    }
+}
