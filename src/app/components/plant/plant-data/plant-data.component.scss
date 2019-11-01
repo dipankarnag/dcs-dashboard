@@ -99,16 +99,15 @@ table {
     text-align: center;
 }
 
+@media screen and (max-width: 700px) {
+    .mat-cell, .mat-header-cell {
+        font-size: 0.7em;
+    }
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .hide-column {
         display: none;
-    }
-
-    .mat-cell, .mat-header-cell {
-        // padding-right: 10px;
-        font-size: 0.7em;
-        // word-break: break-all;
     }
 }
 
