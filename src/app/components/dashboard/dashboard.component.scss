@@ -10,11 +10,11 @@
 
 .main-container {
     text-align: center;
-    // justify-content: center;
-    // vertical-align: middle;
-    // max-height: 200vh !important;
-    // width: 100vw;
     background-color: white;
+}
+
+.main-container::-webkit-scrollbar {
+    display: none;
 }
 
 .plant-container {
